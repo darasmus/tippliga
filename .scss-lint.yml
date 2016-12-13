@@ -1,0 +1,28 @@
+# SCSS-LINT
+# Sass linting
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+# https://github.com/brigade/scss-lint/blob/master/data/property-sort-orders/smacss.txt
+
+linters:
+      
+  Indentation:
+    enabled: true
+    character: space
+    width: 4
+
+  LeadingZero:
+    enabled: false
+
+  HexLength:
+    enabled: false
+      
+  NestingDepth:
+    max_depth: 4
+  
+  Shorthand:
+    enabled: false
+    
+  PropertySortOrder:
+    order: smacss
+    ignore_unspecified: true
+
