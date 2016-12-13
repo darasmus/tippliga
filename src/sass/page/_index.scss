@@ -1,0 +1,18 @@
+.index-wrapper {
+    // wrap stuff here
+}
+
+.js-toggle {
+    cursor: pointer;
+
+    &:after {
+        content: ' +';
+    }
+
+    &.is-on {
+        &:after {
+            content: ' -';
+        }
+    }
+}
+

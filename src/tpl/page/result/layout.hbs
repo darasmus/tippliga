@@ -1,0 +1,67 @@
+<h2>ERGEBNISSE</h2>
+<br />
+
+<div class="select-style">
+    <select class="gameday-selector" name="gameday">
+        {{#times 34}}
+            <option value="{{this}}">{{this}}. Spieltag</option>
+        {{/times}}
+    </select>
+</div>
+
+<div class="select-style">
+    <select class="liga-selector" name="liga">
+        <option value="1">1. Liga</option>
+        <option value="2">2. Liga</option>
+        <option value="3">3. Liga</option>
+    </select>
+</div>
+
+<br />
+
+<h3>Ergebnisse</h3>
+<div class="result-row border-top">
+    <span class="team head home">HEIM</span>
+    <span class="result-head"></span>
+    <span class="team head away">GAST</span>
+</div>
+{{#each ergebnisse}}
+    <div class="result-row">
+        <span class="team home">
+             <span class="teamname">({{spielerVornameA}} {{spielerNachnameA}}) {{mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft1}}.png)"></span>
+        </span>
+        {{#if toreA}}
+            <span class="result">{{toreA}}&nbsp;:&nbsp;{{toreB}}</span>
+        {{else}}
+            <span class="result"> -&nbsp;:&nbsp;- </span>
+        {{/if}}
+        <span class="team away">
+            <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft2}}.png)"></span> <span class="teamname">{{mannschaftB}} ({{spielerVornameB}} {{spielerNachnameB}})</span>
+        </span>
+    </div>
+{{/each}}
+
+<br /><br />
+
+<h3>Tabelle</h3>
+
+<div class="table-row head border-top">
+    <span class="position">#</span>
+    <span class="team">TEAM <span class="teamname">(NAME)</span></span>
+    <span class="point">PKT</span>
+    <span class="goal">TOR+</span>
+    <span class="goal">TOR-</span>
+    <span class="goal">TOR∆</span>
+</div>
+
+{{#each tabelle}}
+    <div class="table-row {{stripes @index}} {{#if me}}table-row-me{{/if}}">
+        <span class="position">{{platz}}</span>
+        <span class="team"><span class="teamlogo" style="background-image: url(img/wappen/{{mannid}}.png)"></span> <span class="teamname">{{name}} ({{vorname}} {{nachname}})</span></span>
+        <span class="point">{{punkte}}</span>
+        <span class="goal">{{toreplus}}</span>
+        <span class="goal">{{toreminus}}</span>
+        <span class="goal">{{diff}}</span>
+    </div>
+{{/each}}
+

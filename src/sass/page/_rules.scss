@@ -1,0 +1,28 @@
+.rules-wrapper {
+    table {
+        margin-top: 40px;
+
+        td {
+            padding: 10px 0;
+            border-top: 1px solid $color-blue-dark;
+            line-height: 1.5em;
+        }
+
+        .knopf {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: $color-blue-dark;
+            color: $color-white;
+            text-align: center;
+        }
+
+        .regeln-text {
+            padding-left: 20px;
+        }
+
+        .odd {
+            background: $color-blue-light;
+        }
+    }
+}

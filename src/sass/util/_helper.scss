@@ -1,0 +1,50 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-open {
+    display: block;
+}
+
+// Empty hint
+////////////////////////////////////////////////////////////////////////////////////////////////
+.empty-hint {
+    display: inline-block;
+    max-width: 570px;   
+    margin: 50px 0 0 0;
+    color: $color-concrete;
+    font-size: $font-size-hint;
+}
+
+.icon-empty-hint {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 10px 40px 0 40px;
+    vertical-align: top;
+    fill: $color-highlight;
+}
+
+.info {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $color-pink-dark;
+    color: $color-white;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-pink;
+    }
+}

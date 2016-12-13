@@ -1,0 +1,94 @@
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-semi-black-dark;
+    text-align: center;
+    z-index: 20;
+}
+
+.login {
+    display: inline-block;
+    position: relative;
+    top: 30%;
+    width: 450px;
+    height: 260px;
+    padding: 25px;
+    border: 4px solid $color-blue-dark;
+    background-color: $color-blue-light;
+    background-image: url('../img/logo-login.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 350px;
+    color: $color-black;
+
+    .message {
+        display: block;
+        padding-bottom: 10px;
+        color: $color-blue-dark;
+        font-size: $font-size-big;
+        text-align: right;
+    }
+
+    .close {
+        display: none;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $color-blue-dark;
+        color: $color-white;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $color-white;
+            color: $color-blue-dark;
+        }
+    }
+
+    .login-form {
+        text-align: right;
+    }
+
+    .btn-wrapper {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100px;
+        height: 40px;
+        margin-top: 0;
+        border: 0;
+        border-radius: 3px;
+        outline: 0;
+        background: $color-button-bg;
+        color: $color-white;
+        font: inherit;
+        line-height: 38px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $color-white;
+            color: $color-blue-dark;
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .login {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+

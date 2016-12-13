@@ -1,0 +1,45 @@
+.icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.icon-text {
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+//specific icons
+////////////////////////////////////////////////////////////////////////////////////////////////
+.icon-logo-tvs {
+    width: $logo-width;
+    height: 28px;
+}
+
+.icon-search {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-label {
+    width: 28px;
+    height: 16px;
+    fill: $color-silver;
+}
+
+.icon-account {
+    width: 17px;
+}
+
+.icon-play-locked {
+    width: 41px;
+    height: 41px;
+    fill: $color-white;    
+}
+
+//reset pointer vents on nested svgs due to click bugs in ie and safari
+[class^='icon-'] svg {
+    pointer-events: none;
+}
+
+

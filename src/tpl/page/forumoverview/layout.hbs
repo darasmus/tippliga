@@ -1,0 +1,23 @@
+<h2>FORUMÜBERSICHT</h2>
+
+<div class="btn new-post">NEUER BEITRAG</div>
+
+<div class="overview-head">
+    <div class="title">TITEL</div>
+    <div class="user">BENUTZER</div>
+    <div class="answer">ANZAHL</div>
+    <div class="date">LETZTER BEITRAG</div>
+</div>
+
+{{#each issues}}
+
+    <a href="#forum/{{id}}">
+        <div class="overview-list fhover off">
+            <div class="title">{{titel}}</div>
+            <div class="user">{{benutzer}}</div>
+            <div class="answer">{{count}}</div>
+            <div class="date">{{latest}}</div>
+        </div>
+    </a>
+{{/each}}
+

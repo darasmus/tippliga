@@ -1,0 +1,52 @@
+.ct-perfect-fourth {
+    height: 460px;
+}
+
+.ct-series-b .ct-line {
+    stroke: $color-blue-dark;
+    stroke-width: 3px;
+}
+
+.ct-series-a .ct-line {
+    stroke: $color-blue-light;
+    stroke-width: 3px;
+}
+
+.ct-series-a .ct-point,
+.ct-series-b .ct-point {
+    stroke: $color-blue-light;
+    stroke-width: 12px;
+}
+
+.ct-series-b .ct-point {
+    stroke: $color-blue-dark;
+}
+
+
+.tooltip {
+    display: inline-block;
+    position: absolute;
+    min-width: 100px;
+    height: 50px;
+    padding: 10px;
+    background: $color-blue-light;
+    color: $color-blue-dark;
+    font-size: $font-size-normal;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+
+    &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-top-color: $color-blue-light;
+        content: '';
+    }
+}
+

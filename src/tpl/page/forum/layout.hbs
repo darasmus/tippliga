@@ -1,0 +1,50 @@
+<h2>FORUM</h2>
+
+<a href="#forumoverview" class="btn back">ZUR ÜBERSICHT</a>
+
+{{#each issues}}
+
+    <div class="parent">
+        <div class="parent-head">
+            <div class="title">{{titel}}</div>
+            <div class="user">{{benutzer}}</div>
+            <div class="date">{{datum}}</div>
+        </div>
+        <div class="txt parent-body">
+            {{{beitrag}}}
+            {{#if linktext}}
+                <br /><br />
+                <b>Link:</b>
+                <a href="{{link}}" class="forum-link" target="_blank">[{{linktext}}]</a>
+            {{/if}}
+        </div>
+
+        {{#if children}}
+            <div class="children">
+                <h5>ANTWORTEN:</h5>
+                {{#each children}}
+                    <div class="child">
+                        <div class="child-head">
+                            <div class="title">{{titel}}</div>
+                            <div class="user">{{benutzer}}</div>
+                            <div class="date">{{datum}}</div>
+                        </div>
+                        <div class="txt child-body">
+                            {{{beitrag}}}
+
+                            {{#if linktext}}
+                            <br /><br />
+                            <b>Link:</b>
+                                <a href="{{link}}" class="forum-link" target="_blank">[{{linktext}}]</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+
+{{/each}}
+
+<div class="btn new-post">NEUE ANTWORT</div>
+

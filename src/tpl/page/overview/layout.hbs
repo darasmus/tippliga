@@ -1,0 +1,59 @@
+<h2>TIPPSCHEIN</h2>
+<br />
+
+<div class="select-style">
+    <select class="gameday-selector" name="gameday">
+        {{#times spieltag}}
+            <option value="{{this}}">{{this}}. Spieltag</option>
+        {{/times}}
+    </select>
+</div>
+
+<br />
+
+<div class="overview-row border-top head">
+    <span class="team home">HEIM</span>
+    <span class="team-divide"></span>
+    <span class="team away">GAST</span>
+    <span class="score">ERG</span>
+    <span class="userresult">{{gegnerVorname}} {{gegnerNachname}}</span>
+    <span class="userresult">{{user.vorname}} {{user.nachname}}</span>
+</div>
+{{#each overview}}
+    <div class="overview-row">
+        <span class="team home"><span class="teamname">{{mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft1}}.png)"></span></span>
+        <span class="team-divide">&nbsp;:&nbsp;</span>
+        <span class="team away"><span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft2}}.png)"></span> <span class="teamname">{{mannschaftB}}</span></span>
+
+        {{#if tore1}}
+            <span class="score">{{tore1}}&nbsp;:&nbsp;{{tore2}}</span>
+        {{else}}
+            <span class="score"> -&nbsp;:&nbsp;- </span>
+        {{/if}}
+
+        <div class="userresult">
+            {{#if tipp2A}}
+                <span class="result">{{tipp2A}}&nbsp;:&nbsp;{{tipp2B}}</span>
+            {{else}}
+                <span class="result">-&nbsp;:&nbsp;-</span>
+            {{/if}}
+            <span class="points">{{punkteB}}</span>
+        </div>
+
+        <div class="userresult">
+            {{#if tipp1A}}
+                <span class="result result-me">{{tipp1A}}&nbsp;:&nbsp;{{tipp1B}}</span>
+            {{else}}
+                <span class="result result-me">-&nbsp;:&nbsp;-</span>
+            {{/if}}
+            <span class="points">{{punkteA}}</span>
+        </div>
+
+
+    </div>
+{{/each}}
+<div class="overview-row border-top head">
+    <span class="points sum sum-a">{{gesPunkteA}}</span>
+    <span class="points sum sum-b">{{gesPunkteB}}</span>
+</div>
+

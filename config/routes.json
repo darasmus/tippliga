@@ -1,0 +1,91 @@
+[
+    {
+        "key"       : "index",
+        "routes"    : [
+            ""
+        ],
+        "redirects" : [
+            "index",
+            "home",
+            "start"
+        ],
+        "title"     : "Index"
+    },
+
+    {
+        "key"       : "user",
+        "routes"    : [
+            "user"
+        ],
+        "title"     : "Benutzer"
+    },
+
+    {
+        "key"       : "tipp",
+        "routes"    : [
+            "tipp",
+            "tippabgabe"
+        ],
+        "title"     : "Tippschein"
+    },
+
+    {
+        "key"       : "result",
+        "routes"    : [
+            "result",
+            "ergebnisse"
+        ],
+        "title"     : "Ergebnisse"
+    },
+
+    {
+        "key"       : "overview",
+        "routes"    : [
+            "overview",
+            "tippschein"
+        ],
+        "title"     : "Tippschein"
+    },
+
+    {
+        "key"       : "table",
+        "routes"    : [
+            "table",
+            "tabelle"
+        ],
+        "title"     : "Tabelle"
+    },
+
+    {
+        "key"       : "rules",
+        "routes"    : [
+            "rules",
+            "regeln"
+        ],
+        "title"     : "Regeln"
+    },
+
+    {
+        "key"       : "forum",
+        "routes"    : [
+            "forum/:id"
+        ],
+        "title"     : "Forum"
+    },
+
+    {
+        "key"       : "forumoverview",
+        "routes"    : [
+            "forumoverview"
+        ],
+        "title"     : "Forumdetail"
+    },
+
+    {
+        "key"       : "error",
+        "routes"    : [
+            "*error"
+        ],
+        "title"     : "Error"
+    }
+]

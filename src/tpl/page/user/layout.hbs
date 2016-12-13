@@ -1,0 +1,40 @@
+<h2>TIPP-ERGEBNIS</h2>
+<br />
+
+<div class="select-style">
+    <select class="gameday-selector" name="gameday">
+        {{#times 34}}
+            <option value="{{this}}">{{this}}. Spieltag</option>
+        {{/times}}
+    </select>
+</div>
+
+<br />
+
+<div class="tipp-row border-top head">
+    <span class="team home">HEIM</span>
+    <span class="team-divide"></span>
+    <span class="team away">GAST</span>
+    <span class="result">ERG</span>
+    <span class="result">TIPP</span>
+    <span class="points">PKT</span>
+</div>
+{{#each dta}}
+    <div class="tipp-row">
+        <span class="team home">{{mannschaftA }}</span>
+        <span class="team-divide">&nbsp;:&nbsp;</span>
+        <span class="team away">{{mannschaftB}}</span>
+
+        {{#if tore1}}
+            <span class="result">{{tore1}}&nbsp;:&nbsp;{{tore2}}</span>
+        {{else}}
+            <span class="result"> -&nbsp;:&nbsp;- </span>
+        {{/if}}
+
+        <span class="result tipp">{{tipp1}}&nbsp;:&nbsp;{{tipp2}}</span>
+        <span class="points">{{punkte}}</span>
+    </div>
+{{/each}}
+<div class="tipp-row border-top head">
+    <span class="points sum">{{gesamtpunkte}}</span>
+</div>

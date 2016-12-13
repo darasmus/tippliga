@@ -1,0 +1,6 @@
+AuthUserFile /usr/www/users/dadeva//tippliga/admin//.htpasswd
+AuthName "Realm"
+AuthType Basic
+<Limit GET POST PUT>
+require valid-user
+</Limit>

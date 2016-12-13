@@ -1,0 +1,77 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////////////////////
+// main colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-pink-dark: #df4678;
+$color-pink: #f1608f;
+$color-transparent: transparent;
+$color-blue-dark: #394e79;
+$color-blue-light: #b7c1e4;
+$color-dark-orange: #e67a00;
+$color-dark-green: #19994a;
+$color-shadow: #6f7384;
+
+
+// grey scala
+$color-concrete: #f3f3f3;
+$color-silver: #c0c0c0;
+$color-dusty-grey: #949494;
+$color-dove-gray: #666666;
+$color-tundora: #414141;
+
+//semi transparent
+$color-semi-black: rgba(0, 0, 0, .5);
+$color-semi-black-dark: rgba(0, 0, 0, .9);
+$color-semi-white: rgba(255, 255, 255, .7);
+
+// most colors
+$color-highlight: $color-dark-green;
+$color-primary: $color-blue-dark;
+$color-secondary: $color-dove-gray;
+$color-hover: $color-white;
+
+// text color
+$color-text-primary: $color-blue-dark;
+$color-text-highlight: $color-blue-light;
+$color-text-headline: $color-silver;
+
+// bg color
+$color-bg: $color-white;
+
+// border colors
+$color-border: $color-concrete;
+
+// button color
+$color-button-bg: $color-blue-dark;
+$color-button-bg-hover: $color-blue-light;
+
+
+// Font
+////////////////////////////////////////////////////////////////////////////////////////////////
+$helvetica: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//font sizes
+$font-size-tiny: 11px;
+$font-size-small: 14px;
+$font-size-normal: 16px;
+$font-size-big: 20px;
+
+$font-size-headline: 22px;
+$font-size-headline-big: 28px;
+
+$font-size-hint: 22px;
+
+// font weight definitions
+$font-weight-light: 100;
+$font-weight-regular: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+
+
+// Sizes
+////////////////////////////////////////////////////////////////////////////////////////////////
+$logo-width: 116px;
+$container-width: 960px;
+

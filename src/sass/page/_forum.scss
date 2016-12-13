@@ -1,0 +1,237 @@
+
+.parent {
+    margin-bottom: 0;
+    border-right: 1px solid $color-blue-dark;
+    border-left: 15px solid $color-blue-dark;
+
+    .forum-link {
+        margin: 5px 0;
+        padding: 5px;
+        background: $color-white;
+        color: $color-blue-dark;
+
+        &:hover {
+            background: $color-blue-dark;
+            color: $color-white;
+        }
+    }
+
+    .date {
+        display: inline-block;
+        width: 50%;
+        padding: 3px 10px;
+        float: left;
+        background: $color-blue-light;
+        font-size: $font-size-tiny;
+    }
+
+    .user {
+        display: inline-block;
+        width: 50%;
+        padding: 3px 10px;
+        float: right;
+        background: $color-blue-light;
+        font-size: $font-size-tiny;
+        text-align: right;
+    }
+
+    .title {
+        padding: 10px;
+        clear: both;
+        border-top: 1px solid $color-blue-dark;
+        border-bottom: 1px solid $color-blue-dark;
+        background: $color-blue-dark;
+        color: $color-white;
+        font-size: $font-size-big;
+    }
+
+    .txt {
+        padding: 10px;
+        clear: both;
+        border-top: 1px solid $color-blue-dark;
+        border-bottom: 1px solid $color-blue-dark;
+    }
+
+    .children {
+        margin-left: 40px;
+        padding-top: 20px;
+    }
+
+    .child {
+        border-left: 15px solid $color-blue-dark;
+    }
+}
+
+.overview-head {
+
+    width: 100%;
+    height: 34px;
+    clear: both;
+    border-bottom: 1px solid $color-blue-dark;
+    background: $color-blue-dark;
+    color: $color-white;
+    line-height: 34px;
+
+    .title {
+        display: inline-block;
+        width: 45%;
+        padding-left: 10px;
+    }
+
+    .user {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .answer {
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+    }
+
+    .date {
+        display: inline-block;
+        width: 20%;
+        float: right;
+    }
+
+}
+
+.overview-list {
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 34px;
+    clear: both;
+    transform: translateZ(0);
+    border-bottom: 1px solid $color-blue-dark;
+    line-height: 34px;
+    vertical-align: middle;
+
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    &.on {
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scaleY(1);
+            background: $color-blue-dark;
+            content: '';
+            z-index: -1;
+
+            transform-origin: 50% 0;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+    }
+
+    &.off {
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scaleY(0);
+            background: $color-blue-dark;
+            content: '';
+            z-index: -1;
+
+            transform-origin: 50% 0;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+        }
+    }
+
+    .title {
+        display: inline-block;
+        width: 45%;
+        padding-left: 10px;
+    }
+
+    .user {
+        display: inline-block;
+        width: 20%;
+    }
+
+    .answer {
+        display: inline-block;
+        width: 10%;
+        text-align: center;
+    }
+
+    .date {
+        display: inline-block;
+        width: 20%;
+        float: right;
+    }
+
+}
+
+
+
+.new-post,
+.back {
+    display: inline-block;
+    width: 150px;
+    height: 34px;
+    margin: 20px 0;
+    border: 1px solid $color-blue-dark;
+    border-radius: 3px;
+    line-height: 34px;
+    text-align: center;
+
+    &:hover {
+        background: $color-blue-dark;
+        color: $color-white;
+    }
+}
+
+.post-wrapper {
+    .submit {
+        &:hover {
+            background: $color-white;
+            color: $color-blue-dark;
+        }
+    }
+}
+
+//phone
+@media screen and (max-width: 960px) {
+    .overview-head,
+    .overview-list {
+
+        .title {
+            width: 50%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .user {
+            width: 45%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .answer {
+            display: none;
+        }
+
+        .date {
+            display: none;
+        }
+
+    }
+}
+

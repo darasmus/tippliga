@@ -1,0 +1,4 @@
+AuthUserFile /usr/www/users/dadeva//tippliga/admin//.htpasswd
+AuthName "Realm"
+AuthType Basic
+require valid-user

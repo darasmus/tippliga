@@ -1,0 +1,17 @@
+{
+    "basePath"      : "/",
+    "usertable"     : "api/usertable.php?spieler={spieler}&spieltag={spieltag}&liga={liga}",
+    "playday"       : "api/playday.php",
+    "user"          : "api/user.php",
+    "table"         : "api/tabelle.php",
+    "savetipp"      : "api/savetipp.php",
+    "login"         : "api/login.php",
+    "logout"        : "api/logout.php",
+    "forumoverview" : "api/forumoverview.php",
+    "forum"         : "api/forum.php?id={id}",
+    "savepost"      : "api/savepost.php",
+    "home"          : "api/home.php?spieltag={spieltag}&liga={liga}",
+    "result"        : "api/results.php?spieltag={spieltag}&liga={liga}",
+    "overview"      : "api/tippoverview.php?spieler={spieler}&spieltag={spieltag}"
+}
+

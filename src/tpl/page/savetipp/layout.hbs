@@ -1,0 +1,57 @@
+<h2>TIPPABGABE</h2>
+<br />
+
+<div class="select-style">
+    <select class="gameday-selector" name="gameday">
+        {{#times 34}}
+            <option value="{{this}}">{{this}}. Spieltag</option>
+        {{/times}}
+    </select>
+</div>
+<div class="tippdate">TIPPABGABE BIS: {{tippdatum}}</div>
+
+<br />
+
+<div class="tipp-row border-top head">
+    <span class="team home">HEIM</span>
+    <span class="team-divide"></span>
+    <span class="team away">GAST</span>
+    <span class="result">ERG</span>
+    <span class="result">TIPP</span>
+    <span class="points sum">PKT</span>
+</div>
+{{#each dta}}
+    <div class="tipp-row">
+        <span class="team home"><span class="teamname">{{mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft1}}.png)"></span></span>
+        <span class="team-divide">&nbsp;:&nbsp;</span>
+        <span class="team away"><span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft2}}.png)"></span> <span class="teamname">{{mannschaftB}}</span></span>
+
+        {{#if tore1}}
+            <span class="result">{{tore1}}&nbsp;:&nbsp;{{tore2}}</span>
+        {{else}}
+            <span class="result"> -&nbsp;:&nbsp;- </span>
+        {{/if}}
+
+        {{#compare tipp1 '+' operator="==="}}
+            <span class="result tipp">zu spät</span>
+        {{/compare}}
+
+        {{#compare tipp1 '-1' operator=">"}}
+            <span class="result tipp">{{tipp1}}&nbsp;:&nbsp;{{tipp2}}</span>
+        {{/compare}}
+
+        {{#compare tipp1 '-' operator="==="}}
+            <span class="result tipp" data-game="{{id}}" >
+                <input type="tel" class="tippscore tipp-a" name="score-a" />&nbsp;:&nbsp;
+                <input type="tel" class="tippscore tipp-b" name="score-b" />
+            </span>
+        {{/compare}}
+
+        <span class="points sum">{{punkte}}</span>
+    </div>
+{{/each}}
+<div class="tipp-row border-top head">
+    <span class="points sum">{{gesamtpunkte}}</span>
+</div>
+
+<button class="submit">SPEICHERN</button>

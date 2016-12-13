@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4 {
+    color: $color-text-primary;
+    font-weight: $font-weight-light;
+}
+
+h1,
+h2 {
+    font-size: $font-size-headline-big;
+}
+
+h3,
+h4 {
+    font-size: $font-size-headline;
+}
+
+h5 {
+    font-size: $font-size-normal;
+    font-style: italic;
+}
+
+.not-selectable {
+    user-select: none;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.text-underlined {
+    text-decoration: underline;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-small {
+    font-size: $font-size-small;
+}
+
+//phone tablet
+@media screen and (max-width: 960px) {
+    h1,
+    h2 {
+        font-size: $font-size-normal;
+    }
+
+    h3,
+    h4 {
+        font-size: $font-size-small;
+    }
+}

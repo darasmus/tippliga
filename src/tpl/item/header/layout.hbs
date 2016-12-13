@@ -1,0 +1,55 @@
+<div class="logo nav-home"></div>
+<div class="navigation">
+    <div class="item nav-overview">TIPPSCHEIN</div>
+    <div class="item nav-result">SPIELTAG</div>
+    <div class="item nav-tipp">TIPPABGABE</div>
+    <div class="item nav-table">TABELLE</div>
+    <div class="item nav-forum">FORUM</div>
+    <div class="nav-logout"></div>
+</div>
+
+<div class="mobile-menu-btn"></div>
+<div class="mobile-menu">
+    <div class="item nav-overview">TIPPSCHEIN</div>
+    <div class="item nav-result">SPIELTAG</div>
+    <div class="item nav-tipp">TIPPABGABE</div>
+    <div class="item nav-table">TABELLE</div>
+    <div class="item nav-forum">FORUM</div>
+    <a href="#rules"><div class="item nav-rules">REGELN</div></a>
+    <div class="item nav-logout"></div>
+</div>
+
+
+<div class="next-game">
+    <div class="headline">DEIN NÄCHSTES SPIEL</div>
+    {{#if gegner.home}}
+        <div class="teamlogo homelogo">
+            {{#if gegner.team}}
+                <img src="img/wappen/{{gegner.team}}.png" width="32" height="32" />
+            {{/if}}
+        </div>
+        <div class="divider">:</div>
+        <div class="teamlogo awaylogo">
+            {{#if user.mannschaft}}
+                <img src="img/wappen/{{user.mannschaft}}.png" width="32" height="32" />
+            {{/if}}
+        </div>
+    {{else}}
+        <div class="teamlogo homelogo">
+            {{#if user.mannschaft}}
+                <img src="img/wappen/{{user.mannschaft}}.png" width="32" height="32" />
+            {{/if}}
+        </div>
+        <div class="divider">:</div>
+        <div class="teamlogo awaylogo">
+            {{#if gegner.team}}
+                <img src="img/wappen/{{gegner.team}}.png" width="32" height="32" />
+            {{/if}}
+        </div>
+    {{/if}}
+    <div class="headline">{{formatDate tipptime 'Do MMMM YYYY, HH:mm'}}</div>
+</div>
+
+<div class="ball-mask"></div>
+<div class="ball"></div>
+

@@ -1,0 +1,70 @@
+<span class="square first">
+    <img src="img/logo.jpg" />
+</span>
+
+<span class="square">
+    <div class="result-row border-top">
+        <span class="team head home small">HEIM</span>
+        <span class="result-head small"></span>
+        <span class="team head away small">GAST</span>
+    </div>
+    {{#each ergebnisse}}
+        <div class="result-row">
+        <span class="team home small">
+            <span class="teamname left">{{mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft1}}.png)"></span>
+        </span>
+            {{#if toreA}}
+                <span class="result small">{{toreA}}&nbsp;:&nbsp;{{toreB}}</span>
+            {{else}}
+                <span class="result small"> -&nbsp;:&nbsp;- </span>
+            {{/if}}
+            <span class="team away small">
+            <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft2}}.png)"></span> <span class="teamname right">{{mannschaftB}}</span>
+        </span>
+        </div>
+    {{/each}}
+</span>
+
+<span class="square scroll" id="standing">
+    <div class="table-row head border-top">
+        <span class="player small"><span class="teamname">NAME</span></span>
+        <span class="point">5er</span>
+        <span class="point">4er</span>
+        <span class="point">3er</span>
+        <span class="point">0er</span>
+        <span class="point">PKT</span>
+    </div>
+    {{#each standing}}
+        <div class="table-row {{stripes @index}} {{#if me}}table-row-me{{/if}} small">
+            <span class="player small"><span class="teamname">{{vorname}} {{nachname}}</span></span>
+            <span class="point">{{drei}}</span>
+            <span class="point">{{zwei}}</span>
+            <span class="point">{{ein}}</span>
+            <span class="point">{{nul}}</span>
+            <span class="point">{{punkte}}</span>
+        </div>
+    {{/each}}
+    <div class="scroll-hint">Scroll runter...</div>
+</span>
+
+<span class="square">
+    <div class="table-row head border-top">
+        <span class="position">#</span>
+        <span class="team small">TEAM <span class="teamname right">(NAME)</span></span>
+        <span class="point">PKT</span>
+    </div>
+
+    {{#each tabelle}}
+        <div class="table-row {{stripes @index}} {{#if me}}table-row-me{{/if}} small">
+            <span class="position">{{platz}}</span>
+            <span class="team small"><span class="teamlogo" style="background-image: url(img/wappen/{{mannid}}.png)"></span> <span class="teamname right">{{name}} ({{vorname}} {{nachname}})</span></span>
+            <span class="point">{{punkte}}</span>
+        </div>
+    {{/each}}
+</span>
+
+<span class="chart">
+    <div class="ct-chart ct-perfect-fourth"></div>
+</span>
+
+
