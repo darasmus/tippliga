@@ -1,0 +1,14 @@
+//print
+@media print {
+    header,
+    footer,
+    .select-style,
+    .print-button {
+        display: none;
+    }
+
+    main {
+        max-width: 500px;
+    }
+}
+
