@@ -1,4 +1,5 @@
 import _ from 'underscore';
+import $ from 'jquery';
 import app from '../../../app';
 import PageView from '../../../base/view/page';
 import OverviewModel from '../model/overview';
@@ -13,7 +14,9 @@ export default class OverviewView extends PageView {
             className   : 'overview-wrapper container-wrapper',
 
             events      : {
-                'change .gameday-selector': 'reload'
+                'change .gameday-selector': 'reload',
+                'click .print-page': 'print',
+                'click .open-alltipps': 'openAlltipps'
             }
 
         }, options));
@@ -56,6 +59,15 @@ export default class OverviewView extends PageView {
         this.model.url = _.getApiUrl('overview').replace('{spieltag}', this.spieltag).replace('{spieler}', this.user.id);
 
         this.synchronize(this.model);
+    }
+
+    print () {
+        window.print();
+    }
+
+    openAlltipps (ev) {
+        let spiel = $(ev.currentTarget).data('game');
+        app.trigger('alltipps:open', spiel);
     }
 
 }

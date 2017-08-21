@@ -3,8 +3,10 @@
    db_connect();
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Administration TippLIGA</title>
   <link rel="STYLESHEET" type="text/css" href="../formate.css">
 </head>

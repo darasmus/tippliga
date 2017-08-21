@@ -1,5 +1,40 @@
 <span class="square first">
-    <img src="img/logo.jpg" />
+
+    <div class="winner-liga-headline">
+        Gewinner des Spietags
+    </div>
+
+    <div class="winner-liga">
+        <div class="winner-liga-head">1. LIGA</div>
+        <div class="winner-liga-score">{{gewinner1.0.punkte}}<br /><span class="text-small">PKT.</span></div>
+        {{#each gewinner1}}
+            <div class="winner-liga-person">
+                <span class="winner-liga-name">{{vorname}} {{nachname}}</span>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="winner-liga">
+        <div class="winner-liga-head">2. LIGA</div>
+        <div class="winner-liga-score">{{gewinner2.0.punkte}}<br /><span class="text-small">PKT.</span></div>
+        {{#each gewinner2}}
+            <div class="winner-liga-person">
+                <span class="winner-liga-name">{{vorname}} {{nachname}}</span>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="winner-liga">
+        <div class="winner-liga-head">3. LIGA</div>
+        <div class="winner-liga-score">{{gewinner3.0.punkte}}<br /><span class="text-small">PKT.</span></div>
+        {{#each gewinner3}}
+            <div class="winner-liga-person">
+                <span class="winner-liga-name">{{vorname}} {{nachname}}</span>
+            </div>
+        {{/each}}
+    </div>
+
+    <!--<img src="img/logo.jpg" />-->
 </span>
 
 <span class="square">

@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
     require('session.inc.php');
     require('api.lib.php');
 
@@ -22,6 +24,11 @@
 
     //ergebnisse
     $return['ergebnisse'] = getResult($spieltag, $liga, $db);
+
+    //gameday-winner
+    $return['gewinner1'] = getBestSpieler($spieltag, 1, $db);
+    $return['gewinner2'] = getBestSpieler($spieltag, 2, $db);
+    $return['gewinner3'] = getBestSpieler($spieltag, 3, $db);
 
     $json = json_encode($return);
     print_r($json);

@@ -264,6 +264,12 @@
         background: $color-blue-light;
     }
 
+    .open-alltipps {
+        display: inline-block;
+        width: 50px;
+        text-align: center;
+    }
+
     .team-divide {
         display: inline-block;
         width: 50px;
@@ -382,14 +388,14 @@
         }
 
         .userresult {
-            width: 19%;
+            width: 20%;
 
             .result {
-                width: 60%;
+                width: 50%;
             }
 
             .points {
-                width: 40%;
+                width: 35%;
             }
         }
     }

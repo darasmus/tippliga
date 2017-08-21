@@ -9,6 +9,11 @@
     </select>
 </div>
 
+
+<div class="print-page print-button">
+    Tippschein drucken
+</div>
+
 <br />
 
 <div class="overview-row border-top head">
@@ -21,6 +26,9 @@
 </div>
 {{#each overview}}
     <div class="overview-row">
+
+        <span class="open-alltipps" data-game="{{id}}">A</span>
+
         <span class="team home"><span class="teamname">{{mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft1}}.png)"></span></span>
         <span class="team-divide">&nbsp;:&nbsp;</span>
         <span class="team away"><span class="teamlogo" style="background-image: url(img/wappen/{{mannschaft2}}.png)"></span> <span class="teamname">{{mannschaftB}}</span></span>

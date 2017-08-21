@@ -79,6 +79,32 @@
     }
 }
 
+.print-button {
+    display: inline-block;
+    height: 31px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 0 10px;
+    border: 1px solid $color-blue-dark;
+    border-radius: 3px; 
+    line-height: 31px;
+    overflow: hidden;  
+
+
+    &:hover {
+        background: $color-blue-dark;
+        color: $color-white;
+    }
+
+}
+
+//phone tablet
+@media screen and (max-width: 960px) {
+    .print-button {
+        display: none;
+    }    
+}
+
 .select-style {
     display: inline-block;
     width: 154px;

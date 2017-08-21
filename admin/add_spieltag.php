@@ -72,8 +72,10 @@
 
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Administration TippLIGA</title>
   <link rel="STYLESHEET" type="text/css" href="../formate.css">
 </head>
@@ -314,7 +316,7 @@
         	while($i<$all)
         	{
                 	$id = mysql_result($result,$i,'id');
-                	$name = mysql_result($result,$i,'name');
+                	$name = utf8_encode(mysql_result($result,$i,'name'));
 	
 			if($mannschaft1[$p] == $id)
 			{	
@@ -339,7 +341,7 @@
         	while($i<$all)
         	{
                 	$id = mysql_result($result,$i,'id');
-                	$name = mysql_result($result,$i,'name');
+                	$name = utf8_encode(mysql_result($result,$i,'name'));
 	
 			if($mannschaft2[$p] == $id)
 			{	
@@ -387,7 +389,7 @@
         	while($i<$all)
         	{
                 	$id = mysql_result($result,$i,'id');
-                	$name = mysql_result($result,$i,'name');
+                	$name = utf8_encode(mysql_result($result,$i,'name'));
 	
 			if($mannschaft1[$p] == $id)
 			{	
@@ -412,7 +414,7 @@
         	while($i<$all)
         	{
                 	$id = mysql_result($result,$i,'id');
-                	$name = mysql_result($result,$i,'name');
+                	$name = utf8_encode(mysql_result($result,$i,'name'));
 	
 			if($mannschaft2[$p] == $id)
 			{	
@@ -460,7 +462,7 @@
         	while($i<$all)
         	{
                 	$id = mysql_result($result,$i,'id');
-                	$name = mysql_result($result,$i,'name');
+                	$name = utf8_encode(mysql_result($result,$i,'name'));
 	
 			if($mannschaft1[$p] == $id)
 			{	

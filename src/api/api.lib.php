@@ -671,3 +671,54 @@
         return $data;
 
     }
+
+    function getBestSpieler($spieltag, $liga, $db)
+    {
+        if($spieltag > 0)
+        {
+            $query = "SELECT max(a.tore_geschossen) as punkte, b.vorname, b.nachname, c.name
+                            FROM auswertung as a, spieler as b, mannschaften as c
+                            WHERE c.liga=".$liga."
+                            AND a.spieltag=".$spieltag."
+                            AND a.spieler=b.id
+                            AND b.mannschaft=c.id
+                            GROUP BY a.id
+                            ORDER BY punkte DESC";
+
+            //print_r($query);
+            $qr = mysqli_query($db, $query);
+
+            $i = 0;
+            $max = 0;
+            while($r = mysqli_fetch_assoc($qr)) {
+                if($i === 0) {
+                    $max = $r['punkte'];
+                }
+
+                if($max === $r['punkte']) {
+                    $data[] = $r;
+                }
+
+                $i++;
+            }
+
+            return $data;
+        } else {
+            return false;
+        }
+
+    }
+
+    function getAllTippsFromGame($spiel, $db) {
+        $query = "SELECT a.tipp1, a.tipp2, b.vorname, b.nachname
+                    FROM tipps as a, spieler as b 
+                    WHERE a.spieler=b.id 
+                    AND spiel=".$spiel."
+                    ORDER BY b.vorname";
+
+        $qr = mysqli_query($db, $query);
+        while($r = mysqli_fetch_assoc($qr)) {
+            $data[] = $r;
+        }
+        return $data;
+    }

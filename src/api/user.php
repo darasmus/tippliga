@@ -8,6 +8,10 @@
 
     $spieltag = getNextSpieltag($db);
 
+    if(!$spieltag) {
+        $spieltag = 1;
+    }
+
     $gegner = getGegner($spieler, $spieltag, $db);
 
 

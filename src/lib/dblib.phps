@@ -1,4 +1,6 @@
 <?   
+	error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
   	// 13.12.2008 register_globals Fix
   	extract($_GET, EXTR_SKIP);
   	extract($_POST, EXTR_SKIP);
@@ -11,6 +13,8 @@
       print_r($var);
       echo "</pre>";
   	} 
+
+
 
 	function db_connect()
         {

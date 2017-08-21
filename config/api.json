@@ -12,6 +12,7 @@
     "savepost"      : "api/savepost.php",
     "home"          : "api/home.php?spieltag={spieltag}&liga={liga}",
     "result"        : "api/results.php?spieltag={spieltag}&liga={liga}",
-    "overview"      : "api/tippoverview.php?spieler={spieler}&spieltag={spieltag}"
+    "overview"      : "api/tippoverview.php?spieler={spieler}&spieltag={spieltag}",
+    "alltipps"      : "api/alltipps.php?spiel={spiel}",
 }
 

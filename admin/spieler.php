@@ -41,12 +41,12 @@
         while($i<$all)
         {
                 $id = mysql_result($result,$i,'id');
-                $nachname = mysql_result($result,$i,'nachname');
-                $vorname = mysql_result($result,$i,'vorname');
+                $nachname = utf8_encode(mysql_result($result,$i,'nachname'));
+                $vorname = utf8_encode(mysql_result($result,$i,'vorname'));
 				$mannschaft = mysql_result($result,$i,'mannschaft');
 				$liga = mysql_result($result,$i,'liga');
 
-		$logo = "../images/vlogos/".$mannschaft.".gif";
+		$logo = "/img/wappen/".$mannschaft.".png";
 
 		if($i%2 == 0)
 		{
@@ -69,7 +69,7 @@
 		}
 
 		echo "<tr bgcolor=\"$bgcolor\">\n";
-		echo "<td class=\"txt_elf_schwarz\" align=\"center\"><img src=\"$logo\"></td>";
+		echo "<td class=\"txt_elf_schwarz\" align=\"center\"><img width=\"32\" src=\"$logo\"></td>";
 		echo "<td class=\"txt_elf_schwarz\">$nachname</td>";
 		echo "<td class=\"txt_elf_schwarz\">$vorname</td>";
 		echo "<td>";

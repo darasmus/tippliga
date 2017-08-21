@@ -29,7 +29,7 @@
         "autoprefixer-core": "5.2.0",
         "babelify": "6.1.2",
         "backbone": "1.2.1",
-        "backbone-forms": "~0.14",
+        "backbone-forms": "^0.14.1",
         "backbone.marionette": "~2.4.2",
         "bootstrap-sass": "3.3.5",
         "envify": "^3.4.0",
@@ -67,4 +67,3 @@
         "build": "grunt build-release"
     }
 }
-

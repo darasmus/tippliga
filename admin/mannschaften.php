@@ -33,7 +33,7 @@
         while($i<$all)
         {
                 $id = mysql_result($result,$i,'id');
-                $name = mysql_result($result,$i,'name');
+                $name = utf8_encode(mysql_result($result,$i,'name'));
 		$liga = mysql_result($result,$i,'liga');
 
 

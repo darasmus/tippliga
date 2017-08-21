@@ -1,21 +1,21 @@
-//import _ from 'underscore';
+import $ from 'jquery';
 import app from '../../../app';
-import BaseForm from '../../../base/view/form';
+import ItemView from '../../../base/view/item';
 import LoginModel from '../model/login';
 
-export default class LoginForm extends BaseForm {
+export default class LoginForm extends ItemView {
 
     constructor (options) {
-        options = options || {};
+        super(Object.assign({
 
-        super(Object.assign({}, {
+            template: app.template('item/login-form'),
 
             events: {
                 'click button'  : 'submit',
                 'submit'        : 'submit'
             },
 
-            model: new LoginModel(options.data)
+            model: new LoginModel()
 
         }, options));
 
@@ -25,10 +25,11 @@ export default class LoginForm extends BaseForm {
     submit (e) {
         e.preventDefault();
 
-        let errors = this.validate();
+        //let errors = this.validate();
+        let errors = false;
         if (!errors) {
-            this.model.set('user', this.getValue('user'));
-            this.model.set('pwd', this.getValue('pwd'));
+            this.model.set('user', $('#user').val());
+            this.model.set('pwd', $('#pwd').val());
             this.model.sync();
         }
     }

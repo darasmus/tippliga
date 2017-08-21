@@ -21,6 +21,10 @@ h5 {
     font-style: italic;
 }
 
+.small {
+    font-size: $font-size-small;   
+}
+
 .not-selectable {
     user-select: none;
 }
