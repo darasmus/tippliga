@@ -5,6 +5,7 @@
 
     $spiel = $_GET['spiel'];
     $tipps['tipps'] = getAllTippsFromGame($spiel, $db);
+    $tipps['spiel'] = getSpielDetail($spiel, $db);
 
     $json = json_encode($tipps);
     print_r($json);

@@ -91,6 +91,10 @@
     line-height: 34px;
     text-align: center;
 
+    .table-cell {
+        display: inline-block;
+    }
+
     &.head {
         background: $color-blue-dark;
         color: $color-white;
@@ -265,9 +269,18 @@
     }
 
     .open-alltipps {
-        display: inline-block;
-        width: 50px;
-        text-align: center;
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        width: 28px;
+        height: 28px;
+        background: $color-white;
+        background-image: url('../img/list-icon.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+        cursor: pointer;
     }
 
     .team-divide {
@@ -355,6 +368,11 @@
 //phone
 @media screen and (max-width: 960px) {
     .overview-row {
+        
+        .open-alltipps {
+            display: none;
+        }
+
         .team {
             width: 20%;
 

@@ -230,6 +230,30 @@
         return $spieltag;
     }
 
+    function getSpielDetail($spiel, $db)
+    {
+        $query = "SELECT A.*,
+                        M1.name AS mannschaftA,
+                        M2.name AS mannschaftB,
+                        A.tore1,
+                        A.tore2
+                    FROM spiele as A
+
+                    INNER JOIN mannschaften AS M1
+                       ON A.mannschaft1 = M1.id
+                    INNER JOIN mannschaften AS M2
+                       ON A.mannschaft2 = M2.id
+                       
+                    WHERE A.id=$spiel";
+
+        $q1 = mysqli_query($db, $query);
+        while($r = mysqli_fetch_assoc($q1)) {
+            $spiel = $r;
+        }
+
+        return $spiel;
+    }
+
     function calPoints($tore1,$tore2,$tipp1,$tipp2)
     {
         $div1 = $tore1 - $tore2;

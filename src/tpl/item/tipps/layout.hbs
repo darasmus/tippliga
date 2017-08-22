@@ -1,8 +1,18 @@
 <div class="alltipps">
     <div class="close js-close">X</div>
+
+    <div class="alltipps-head">
+        <span class="team home"><span class="teamname">{{spiel.mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{spiel.mannschaft1}}.png)"></span></span>
+        <span class="team-divide">{{spiel.tore1}}&nbsp;:&nbsp;{{spiel.tore2}}</span>
+        <span class="team away"><span class="teamlogo" style="background-image: url(img/wappen/{{spiel.mannschaft2}}.png)"></span> <span class="teamname">{{spiel.mannschaftB}}</span></span>
+    </div>
+    
     <div class="alltipps-list">
         {{#each tipps}}
-            {{tipp1}}:{{tipp2}} {{vorname}} {{nachname}}<br />
+            <div class="table-row overview-row">
+                <div class="table-cell tipp-name">{{vorname}} {{nachname}}</div>
+                <div class="table-cell tipp-score score">{{tipp1}}:{{tipp2}}</div> 
+            </div>
         {{/each}}
     </div>
 </div>
