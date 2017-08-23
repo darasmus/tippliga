@@ -2,6 +2,7 @@ import _ from 'underscore';
 import app from '../../../app';
 import ItemView from '../../../base/view/item';
 import AlltippsModel from '../model/alltipps';
+import Chartist from '../../../../js/lib/chartist';
 
 export default class AlltippsView extends ItemView {
 
@@ -23,10 +24,21 @@ export default class AlltippsView extends ItemView {
 
     }
 
-    showTipps (spiel) {
+    loadData (spiel) {
         this.model.url = _.getApiUrl('alltipps').replace('{spiel}', spiel);
         this.synchronize(this.model);
+    }
+
+    showTipps (spiel) {
+        this.loadData(spiel);        
         this.$el.removeClass('is-hidden');
+
+        setTimeout(()=>{
+            let stats = this.model.get('stats');
+            new Chartist.Pie('.chart', {
+                series: [stats.heimsiege,stats.auswaertssiege,stats.unentschieden]
+            });
+        }, 200);
     }
 
     hideTipps () {

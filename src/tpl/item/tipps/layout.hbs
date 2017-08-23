@@ -5,6 +5,17 @@
         <span class="team home"><span class="teamname">{{spiel.mannschaftA }}</span> <span class="teamlogo" style="background-image: url(img/wappen/{{spiel.mannschaft1}}.png)"></span></span>
         <span class="team-divide">{{spiel.tore1}}&nbsp;:&nbsp;{{spiel.tore2}}</span>
         <span class="team away"><span class="teamlogo" style="background-image: url(img/wappen/{{spiel.mannschaft2}}.png)"></span> <span class="teamname">{{spiel.mannschaftB}}</span></span>
+    
+        <div class="stats">
+             <div class="chart"></div>
+             <div class="chart-text">
+                <div class="stat"><span class="chart-index home"></span>Heimsieg: {{stats.heimsiege}}</div>
+                <div class="stat"><span class="chart-index away"></span>Auswärtssiegsieg: {{stats.auswaertssiege}}</div>
+                <div class="stat"><span class="chart-index even"></span>Unentschieden: {{stats.unentschieden}}</div>
+            </div>
+           
+        </div>
+    
     </div>
     
     <div class="alltipps-list">

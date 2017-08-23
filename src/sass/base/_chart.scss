@@ -22,6 +22,21 @@
     stroke: $color-blue-dark;
 }
 
+.ct-chart-pie text {
+    display: none;
+}
+
+.ct-series-a .ct-slice-pie {
+    fill: $color-white;
+}
+
+.ct-series-b .ct-slice-pie {
+    fill: $color-blue-light;
+}
+
+.ct-series-c .ct-slice-pie {
+    fill: $color-dark-green;
+}
 
 .tooltip {
     display: inline-block;

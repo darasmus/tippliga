@@ -1,7 +1,7 @@
 <?php
 
-    //error_reporting(E_ALL);
-    ini_set("display_errors", 0);
+    error_reporting(E_ALL);
+    //ini_set("display_errors", 0);
 
     //define
     define ("_DEV", ($_SERVER['REMOTE_ADDR']=='127.0.0.1'));
@@ -176,8 +176,6 @@
                  ORDER BY a.id";
 
         $q1 = mysqli_query($db, $query);
-
-        echo mysqli_error($db);
 
         while($r = mysqli_fetch_assoc($q1)) {
             $result = $r['sd'];
@@ -444,10 +442,8 @@
             );
 
             $return[] = $array;
-
             $c++;
         }
-
         return $return;
     }
 
@@ -743,6 +739,20 @@
         $qr = mysqli_query($db, $query);
         while($r = mysqli_fetch_assoc($qr)) {
             $data[] = $r;
+        }
+        return $data;
+    }
+
+    function getGameStats($spiel, $db) {
+        $query = "SELECT DISTINCT 
+                    (select count(*) from tipps where tipp1=tipp2 and spiel=$spiel) AS unentschieden, 
+                    (select count(*) from tipps where tipp1>tipp2 and spiel=$spiel) AS heimsiege, 
+                    (select count(*) from tipps where tipp1<tipp2 and spiel=$spiel) AS auswaertssiege,
+                    (select count(*) from tipps where spiel=3) AS alle";
+    
+        $qr = mysqli_query($db, $query);
+        while($r = mysqli_fetch_assoc($qr)) {
+            $data = $r;
         }
         return $data;
     }
