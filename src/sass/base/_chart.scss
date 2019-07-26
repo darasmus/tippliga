@@ -26,16 +26,16 @@
     display: none;
 }
 
-.ct-series-a .ct-slice-pie {
-    fill: $color-white;
+.ct-series-a .ct-slice-donut {
+    stroke: $color-white;
 }
 
-.ct-series-b .ct-slice-pie {
-    fill: $color-blue-light;
+.ct-series-b .ct-slice-donut {
+    stroke: $color-blue-light;
 }
 
-.ct-series-c .ct-slice-pie {
-    fill: $color-dark-green;
+.ct-series-c .ct-slice-donut {
+    stroke: $color-blue-medium;
 }
 
 .tooltip {

@@ -92,7 +92,7 @@
         width: 9px;
         height: 9px;
         margin-right: 5px;
-        
+
 
         &.home {
             background: $color-white;
@@ -103,14 +103,14 @@
         }
 
         &.even {
-            background: $color-dark-green;
+            background: $color-blue-medium;
         }
     } 
 
 }
 
 //phone
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     .alltipps {
         width: 90%;
     }

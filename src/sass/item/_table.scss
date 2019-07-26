@@ -366,13 +366,17 @@
 }
 
 //phone
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
     .overview-row {
-        
         .open-alltipps {
             display: none;
         }
+    }
+}
 
+//tablet
+@media screen and (max-width: 960px) {
+    .overview-row {
         .team {
             width: 20%;
 

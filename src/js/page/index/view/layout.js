@@ -30,7 +30,6 @@ export default class HomeView extends PageView {
         }
 
         this.displayed = false;
-
         this.listenTo(app, 'login:success', this.load);
     }
 
