@@ -9,7 +9,7 @@
 		$error = array();
 		
 		$spieldatum = mktime ($stunde,$minute,0,$monat,$tag,$jahr);
-        	$spieldatum2 = mktime ($stunde2,$minute2,0,$monat2,$tag2,$jahr2);		
+        $spieldatum2 = mktime ($stunde2,$minute2,0,$monat2,$tag2,$jahr2);		
 
 		$spieltag2 = $spieltag + 17;
 

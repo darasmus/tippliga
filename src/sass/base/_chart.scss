@@ -8,13 +8,17 @@
 }
 
 .ct-series-a .ct-line {
-    stroke: $color-blue-light;
+    stroke: $color-blue-dark;
     stroke-width: 3px;
+}
+
+.ct-series-a .ct-area {
+    fill: $color-blue-dark;
 }
 
 .ct-series-a .ct-point,
 .ct-series-b .ct-point {
-    stroke: $color-blue-light;
+    stroke: $color-blue-dark;
     stroke-width: 12px;
 }
 

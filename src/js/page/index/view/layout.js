@@ -52,7 +52,7 @@ export default class HomeView extends PageView {
         let point = $(e.target),
             value = (point.attr('ct:value') || 0),
             seriesName = point.parent().attr('ct:series-name');
-        this.toolTip.html(seriesName + '<br>' + value).show();
+        this.toolTip.html(seriesName + '<br>' + -value).show();
     }
 
     hideTooltip () {
@@ -68,23 +68,25 @@ export default class HomeView extends PageView {
 
     loadChart () {
         //chart data
-        let places = _.pluck(this.model.get('summery'), 'platz');
-        let points = _.pluck(this.model.get('summery'), 'punkte');
+        let rawplaces = _.pluck(this.model.get('summery'), 'platz');
+        //let points = _.pluck(this.model.get('summery'), 'punkte');
 
-        let length = Math.min(points.length + 1, 34);
+        rawplaces = [3, 5, 8, 12, 6, 3, 1];
+
+        let places = rawplaces.map(platz => {
+            return -platz;
+        });
+
+        //let length = Math.min(points.length + 1, 34);
 
         let labels = [];
-        for (let i=1; i < length; i++) {
+        for (let i=1; i < 35; i++) {
             labels.push(i);
         }
 
         let data = {
             labels: labels,
             series: [
-                {
-                    name: 'Punkte',
-                    data: points
-                },
                 {
                     name: 'Platz',
                     data: places
@@ -95,12 +97,16 @@ export default class HomeView extends PageView {
         //chart options
         let options = {
             lineSmooth: false,
+            showArea: true,
             width: 960,
             height: 450,
             axisY: {
                 onlyInteger: true,
-                low: 0,
-                high: 18
+                low: -18,
+                high: -1,
+                labelInterpolationFnc: function(value) {
+                    return -value;
+                }
             }
         };
 

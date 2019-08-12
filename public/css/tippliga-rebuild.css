@@ -278,12 +278,15 @@ h5 {
   stroke-width: 3px; }
 
 .ct-series-a .ct-line {
-  stroke: #b7c1e4;
+  stroke: #394e79;
   stroke-width: 3px; }
+
+.ct-series-a .ct-area {
+  fill: #394e79; }
 
 .ct-series-a .ct-point,
 .ct-series-b .ct-point {
-  stroke: #b7c1e4;
+  stroke: #394e79;
   stroke-width: 12px; }
 
 .ct-series-b .ct-point {
