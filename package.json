@@ -53,7 +53,7 @@
         "grunt-scss-lint": "0.3.6",
         "grunt-svgmin": "2.0.1",
         "grunt-svgstore": "0.5.0",
-        "jquery": "2.1.4",
+        "jquery": "3.5.0",
         "jquery-circle-progress": "^1.2.2",
         "load-grunt-tasks": "3.2.0",
         "moment": "2.10.6",
