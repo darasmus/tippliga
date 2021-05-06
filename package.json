@@ -62,7 +62,7 @@
         "slick-carousel": "1.5.8",
         "swiper": "3.1.0",
         "time-grunt": "1.2.1",
-        "underscore": "1.8.3"
+        "underscore": "1.12.1"
     },
     "scripts": {
         "build": "grunt build-release"
