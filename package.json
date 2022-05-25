@@ -34,7 +34,7 @@
         "bootstrap-sass": "3.3.5",
         "envify": "^3.4.0",
         "exorcist": "0.4.0",
-        "grunt": "0.4.5",
+        "grunt": "1.5.3",
         "grunt-browserify": "4.0.0",
         "grunt-cli": "^0.1.13",
         "grunt-contrib-clean": "0.6.0",
